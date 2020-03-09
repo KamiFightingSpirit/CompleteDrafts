@@ -249,10 +249,6 @@ let enterTextClickEffects = function() {
   enterText.parent.destroy();
   enterText.destroy();
   spaceCowboy();
-  //placeholder for spaceCowboy
-  this.text === "Clicked"
-    ? (this.text = "- Enter -")
-    : (this.text = "See You Space Cowboy");
 
   //-------------------MOUSECLICK: EDIT THE EMITTER------------------
   emitter.minimumSpeedMultiplier = 3;
@@ -408,7 +404,7 @@ function spaceCowboyAnimation(sCowboyChildren, startAlpha) {
     .delay(baseDelay)
     .start();
   let translateYOne = new TWEEN.Tween(sCowboyChildren[1])
-    .to({ angle: 25, x: 40, y: posY }, 1300)
+    .to({ angle: 25, x: 40, y: posY + 10 }, 1300)
     .easing(TWEEN.Easing.Sinusoidal.In)
     .delay(1400 + baseDelay)
     .start();
@@ -425,7 +421,7 @@ function spaceCowboyAnimation(sCowboyChildren, startAlpha) {
     .delay(baseDelay * 1.8)
     .start();
   let translateYTwo = new TWEEN.Tween(sCowboyChildren[2])
-    .to({ angle: 25, x: 40, y: posY }, 1300)
+    .to({ angle: 25, x: 40, y: posY + 15 }, 1300)
     .easing(TWEEN.Easing.Sinusoidal.In)
     .delay(1400 + baseDelay * 1.8)
     .start();
@@ -442,7 +438,7 @@ function spaceCowboyAnimation(sCowboyChildren, startAlpha) {
     .delay(baseDelay * 2.6)
     .start();
   let translateYThree = new TWEEN.Tween(sCowboyChildren[3])
-    .to({ angle: 25, x: 40, y: posY }, 1300)
+    .to({ angle: 25, x: 40, y: posY + 20 }, 1300)
     .easing(TWEEN.Easing.Sinusoidal.In)
     .delay(1400 + baseDelay * 2.6)
     .start();
